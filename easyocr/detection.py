@@ -1,5 +1,4 @@
 import torch
-import torch.backends.cudnn as cudnn
 from torch.autograd import Variable
 from PIL import Image
 from collections import OrderedDict
@@ -84,6 +83,7 @@ def get_detector(trained_model, device='cpu', quantize=True, cudnn_benchmark=Fal
     else:
         net.load_state_dict(copyStateDict(torch.load(trained_model, map_location=device, weights_only=False)))
         net = torch.nn.DataParallel(net).to(device)
+        import torch.backends.cudnn as cudnn
         cudnn.benchmark = cudnn_benchmark
 
     net.eval()

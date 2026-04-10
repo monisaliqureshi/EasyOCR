@@ -29,7 +29,7 @@ LOGGER = getLogger(__name__)
 
 class Reader(object):
 
-    def __init__(self, lang_list, gpu=True, model_storage_directory=None,
+    def __init__(self, lang_list, gpu=False, model_storage_directory=None,
                  user_network_directory=None, detect_network="craft", 
                  recog_network='standard', download_enabled=True, 
                  detector=True, recognizer=True, verbose=True, 

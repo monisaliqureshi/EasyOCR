@@ -8,7 +8,6 @@ import os
 import numpy as np
 
 import torch
-import torch.backends.cudnn as cudnn
 
 from .DBNet.DBNet import DBNet
 
@@ -140,6 +139,7 @@ def get_detector(trained_model, backbone = 'resnet18', device='cpu', quantize=Tr
                 pass
     else:
         dbnet.model = torch.nn.DataParallel(dbnet.model).to(device)
+        import torch.backends.cudnn as cudnn
         cudnn.benchmark = cudnn_benchmark
     
     dbnet.model.eval()
