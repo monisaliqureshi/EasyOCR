@@ -1,0 +1,13 @@
+--index-url https://download.pytorch.org/whl/cpu
+torch
+torchvision>=0.5
+--extra-index-url https://pypi.org/simple
+opencv-python-headless
+scipy
+numpy
+Pillow
+scikit-image
+python-bidi
+PyYAML
+Shapely
+pyclipper

@@ -1,3 +1,6 @@
+# Install torch and torchvision BEFORE this package using the CPU-only wheel:
+# pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
+# (or use requirements-cpu.txt which does this automatically)
 torch
 torchvision>=0.5
 opencv-python-headless
@@ -9,4 +12,3 @@ python-bidi
 PyYAML
 Shapely
 pyclipper
-ninja
