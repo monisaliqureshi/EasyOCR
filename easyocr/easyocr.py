@@ -39,7 +39,8 @@ class Reader(object):
         Parameters:
             lang_list (list): Language codes (ISO 639) for languages to be recognized during analysis.
 
-            gpu (bool): Enable GPU support (default)
+            gpu (bool): Enable GPU support. Defaults to False (CPU-only). Set to True to
+            use a GPU if CUDA or MPS is available.
 
             model_storage_directory (string): Path to directory for model data. If not specified,
             models will be read from a directory as defined by the environment variable

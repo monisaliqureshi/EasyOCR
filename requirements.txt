@@ -2,7 +2,7 @@
 # pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
 # (or use requirements-cpu.txt which does this automatically)
 torch
-torchvision
+torchvision>=0.5
 opencv-python-headless
 scipy
 numpy

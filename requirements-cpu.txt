@@ -1,6 +1,6 @@
 --index-url https://download.pytorch.org/whl/cpu
 torch
-torchvision
+torchvision>=0.5
 --extra-index-url https://pypi.org/simple
 opencv-python-headless
 scipy
